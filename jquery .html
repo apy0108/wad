@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Train Booking</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- PAGE 1: BOOK -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>🚄 Train Booking</h1>
+  </div>
+
+  <div data-role="content">
+   
+
+    <label>Passenger Name:</label>
+    <input type="text" id="pname" placeholder="Enter name" />
+
+    <label>Age:</label>
+    <input type="number" id="age" placeholder="Enter age" min="1" />
+
+    <label>Gender:</label>
+    <input type="text" id="gender" placeholder="Male / Female / Other" />
+
+    <label>From:</label>
+    <input type="text" id="from" placeholder="Enter city" />
+
+    <label>To:</label>
+    <input type="text" id="to" placeholder="Enter city" />
+
+    <label>Date:</label>
+    <input type="date" id="date" />
+    <label>Passengers:</label>
+    <input type="number" id="pass" placeholder="Enter number of passengers" min="1" />
+
+    <br /><br />
+    <a href="#confirm" data-role="button" data-theme="b" onclick="book()">Book Ticket</a>
+  </div>
+</div>
+
+<!-- PAGE 2: CONFIRM -->
+<div data-role="page" id="confirm">
+  <div data-role="header">
+    <h1>✅ Confirmed</h1>
+  </div>
+
+  <div data-role="content">
+    <p><strong>From:</strong> <span id="c-from"></span></p>
+    <p><strong>To:</strong> <span id="c-to"></span></p>
+    <p><strong>Date:</strong> <span id="c-date"></span></p>
+    <p><strong>Passengers:</strong> <span id="c-pass"></span></p>
+    <p><strong>Name:</strong> <span id="c-name"></span></p>
+    <p><strong>Age:</strong> <span id="c-age"></span></p>
+    <p><strong>Gender:</strong> <span id="c-gender"></span></p>
+    <p><strong>PNR:</strong> <span id="c-pnr"></span></p>
+
+    <a href="#home" data-role="button">Book Another</a>
+  </div>
+</div>
+
+<script>
+function book() {
+  var from   = $('#from').val();
+  var to     = $('#to').val();
+  var date   = $('#date').val();
+  var pass   = $('#pass').val();
+  var pname  = $('#pname').val();
+  var age    = $('#age').val();
+  var gender = $('#gender').val();
+
+  if (!from || !to || !date || !pname || !age || !gender) {
+    alert('Please fill all fields');
+    return false;
+  }
+
+  $('#c-from').text(from);
+  $('#c-to').text(to);
+  $('#c-date').text(date);
+  $('#c-pass').text(pass);
+  $('#c-name').text(pname);
+  $('#c-age').text(age);
+  $('#c-gender').text(gender);
+  $('#c-pnr').text(Math.floor(Math.random() * 9000000000));
+}
+</script>
+
+</body>
+</html>
