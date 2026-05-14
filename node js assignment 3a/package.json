@@ -1,0 +1,17 @@
+{
+  "name": "my-static-server",
+  "version": "1.0.0",
+  "description": "A simple static file server built with Node.js built-in modules only",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "static-server",
+    "http",
+    "no-framework"
+  ],
+  "author": "",
+  "license": "ISC"
+}
