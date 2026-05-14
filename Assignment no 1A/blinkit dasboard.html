@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> insta mart  Dashboard</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="E:\downloads\wad practiles\Assignment no 1A\blinkit dasboard.css">
+</head>
+<body>
+
+<div class="d-flex">
+
+    <!-- Sidebar -->
+    <div class="sidebar p-3">
+        <h4 class="text-white">Instamart </h4>
+        <ul class="nav flex-column mt-4">
+            <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Orders</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Customers</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content p-4 w-100">
+
+        <!-- Navbar -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3>Dashboard</h3>
+            <input type="text" class="form-control w-25" placeholder="Search...">
+        </div>
+
+        <!-- Cards -->
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6>Total Orders</h6>
+                        <h3>1,245</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6>Revenue</h6>
+                        <h3>₹75,000</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6>Customers</h6>
+                        <h3>540</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6>Products</h6>
+                        <h3>320</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="card mt-5">
+            <div class="card-body">
+                <h5>Recent Orders</h5>
+                <div class="table-responsive">
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#101</td>
+                                <td>pavan</td>
+                                <td>₹500</td>
+                                <td><span class="badge bg-success">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>#102</td>
+                                <td>Ritesh</td>
+                                <td>₹300</td>
+                                <td><span class="badge bg-warning">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#103</td>
+                                <td>Aniket </td>
+                                <td>₹700</td>
+                                <td><span class="badge bg-danger">Cancelled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
